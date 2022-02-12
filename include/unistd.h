@@ -4,5 +4,5 @@
 #define __UNISTD_H__
 int close(int);
 
-int _exit(int);
+void _exit(int);
 #endif

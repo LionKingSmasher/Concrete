@@ -8,8 +8,18 @@ source-dir :=
 
 source-dir += concrete
 
-%.o : %.c
-	$(CC) -c -o -nostdinc $^ $@ $(CFLAGS)
+CFLAGS :=
 
-all: $(source-file)
+CFLAGS += -I../include
+
+CC=gcc
+
+all: $(source-file:.c=.o)
 	$(foreach dir, $(source-dir), make -C $(dir))
+
+%.o : %.c
+	$(CC) -g -c -nostdinc $^ $(CFLAGS)
+
+clear:
+	$(foreach dir, $(source-dir), make -C $(dir) clear)
+	rm *.o

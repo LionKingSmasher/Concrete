@@ -1,17 +1,26 @@
 #include <concrete/syscall.h>
+#include <stdarg.h>
 
-void concrete_syscall(u16 syscall_num, struct syscall_reg_t* reg){
-	asm volatile (
-		"movq %1, %%rax \n\t" // System call number
-		"movq %2, %%rdi \n\t" // First  argument
-		"movq %3, %%rsi \n\t" // Second argument
-		"movq %4, %%rdx \n\t" // Third  argument
-		"movq %5, %%rcx \n\t" // Fourth argument
-		"movq %6, %%r8  \n\t" // Fifth  argument
-		"movq %7, %%r9  \n\t" // Sixth  argument
-		"syscall \n\t"       // System call
-		"movl %%eax, %0 \n\t" // return value
-		: "=r" (reg->rax)
-		: "m" (syscall_num), "m" (reg->rdi), "m" (reg->rsi), "m" (reg->rdx), "m" (reg->rcx), "m" (reg->r8), "m" (reg->r9)
-	);
+u64 concrete_syscall(u16 syscall_num, ...){
+	u32 i = 0;
+	u64 reg[6];
+	va_list reg_list;
+	va_start(reg_list, syscall_num);
+
+	for(; i < 6; i++)
+		reg[i] = va_arg(reg_list, u64);
+
+	va_end(reg_list);
+
+	// asm volatile("mov %0, %%ax"  : : "r"(syscall_num));
+	// asm volatile("mov %0, %%rdi" : : "r"(rdi));
+	// asm volatile("mov %0, %%rsi" : : "r"(reg[1]));
+	// asm volatile("mov %0, %%rdx" : : "r"(reg[2]));
+	// asm volatile("mov %0, %%rcx" : : "r"(reg[3]));
+	// asm volatile("mov %0, %%r8"  : : "r"(reg[4]));
+	// asm volatile("mov %0, %%r9"  : : "r"(reg[5]));
+	// asm volatile("syscall");
+	// asm volatile("mov %%rax, %0" : "=r"(ret_val));
+
+	return system_call(syscall_num, reg);
 }
