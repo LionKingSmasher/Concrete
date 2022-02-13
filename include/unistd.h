@@ -5,4 +5,6 @@
 int close(int);
 
 void _exit(int);
+#define _exit exit
+
 #endif

@@ -6,7 +6,9 @@ source-file += \
 
 source-dir :=
 
-source-dir += concrete
+source-dir += \
+	concrete  \
+	sysdeps
 
 CFLAGS :=
 
@@ -15,11 +17,16 @@ CFLAGS += -I../include
 CC=gcc
 
 all: $(source-file:.c=.o)
-	$(foreach dir, $(source-dir), make -C $(dir))
+	for i in $(source-dir) ; do \
+		make -C $$i;            \
+	done
+# 	$(foreach dir, $(source-dir), make -C $(dir))
 
 %.o : %.c
-	$(CC) -g -c -nostdinc $^ $(CFLAGS)
+	$(CC) -g -c -nostdinc -nostdlib $^ $(CFLAGS)
 
 clear:
-	$(foreach dir, $(source-dir), make -C $(dir) clear)
+	for i in $(source-dir) ; do \
+		make -C $$i clear;      \
+	done
 	rm *.o

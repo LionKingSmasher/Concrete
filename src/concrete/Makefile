@@ -8,13 +8,13 @@ CFLAGS := -I../../include
 
 CC=gcc
 
-all: $(source-file:.c=.o) $(source-file:.s=.o)
+all : $(source-file:.c=.o) $(source-file:.s=.o)
 
 %.o : %.c
-	$(CC) -g -c -nostdinc $^ $(CFLAGS)
+	$(CC) -g -c -nostdinc -nostdlib $^ $(CFLAGS)
 
 %.o : %.s
-	$(CC) -g -c -nostdinc $^ $(CFLAGS)
+	$(CC) -g -c -nostdinc -nostdlib $^ $(CFLAGS)
 
 clear:
 	rm *.o

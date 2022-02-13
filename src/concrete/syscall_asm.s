@@ -17,8 +17,8 @@ system_call:
 	mov  8(%rbx), %rsi
 	mov 16(%rbx), %rdx
 	mov 24(%rbx), %rcx
-	mov 28(%rbx), %r8d
-	mov 32(%rbx), %r9d
+	mov 32(%rbx), %r8d
+	mov 40(%rbx), %r9d
 
 	syscall
 	ret
