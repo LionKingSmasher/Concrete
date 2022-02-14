@@ -11,10 +11,10 @@ CC=gcc
 all : $(source-file:.c=.o) $(source-file:.s=.o)
 
 %.o : %.c
-	$(CC) -g -c -nostdinc -nostdlib $^ $(CFLAGS)
+	$(CC) -g -c -nostdinc -nostdlib -fno-builtin $^ $(CFLAGS)
 
 %.o : %.s
-	$(CC) -g -c -nostdinc -nostdlib $^ $(CFLAGS)
+	$(CC) -g -c -nostdinc -nostdlib -fno-builtin $^ $(CFLAGS)
 
 clear:
 	rm *.o

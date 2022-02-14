@@ -1,15 +1,13 @@
 source-file :=
-
 source-file += \
-	$(CURDIR)/start.s
+	time.c
 
-CC=gcc
+CC = gcc
+CFLAGS = -I../../include
 
-CFLAGS += -I../../../include
+all : $(source-file:.c=.o)
 
-all: $(source-file:.s=.o)
-
-%.o: %.s
+%.o : %.c
 	$(CC) -g -c -nostdinc -nostdlib -fno-builtin $^ $(CFLAGS)
 
 clear:

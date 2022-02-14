@@ -1,14 +1,18 @@
 source-file :=
 
 source-file += \
-	$(CURDIR)/fcntl.c    \
-	$(CURDIR)/unistd.c
+	fcntl.c    \
+	unistd.c   \
+	string.c   \
+	time.c     \
+
 
 source-dir :=
 
 source-dir += \
 	concrete  \
-	sysdeps
+	sysdeps   \
+	sys
 
 CFLAGS :=
 
@@ -23,7 +27,7 @@ all: $(source-file:.c=.o)
 # 	$(foreach dir, $(source-dir), make -C $(dir))
 
 %.o : %.c
-	$(CC) -g -c -nostdinc -nostdlib $^ $(CFLAGS)
+	$(CC) -g -c -nostdinc -nostdlib -fno-builtin $^ $(CFLAGS)
 
 clear:
 	for i in $(source-dir) ; do \
