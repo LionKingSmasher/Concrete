@@ -5,6 +5,7 @@ source-file += \
 	unistd.c   \
 	string.c   \
 	time.c     \
+	stdio.c    \
 
 
 source-dir :=

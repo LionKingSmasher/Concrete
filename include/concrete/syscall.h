@@ -20,7 +20,6 @@ typedef unsigned long long u64;
 // 	// u32 rax;  // rax register
 // };
 
-extern void mov_ax(u64);
 extern u64  system_call(u64, u64*);
 
 u64 concrete_syscall(u16, ...);
