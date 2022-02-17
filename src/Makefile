@@ -6,6 +6,7 @@ source-file += \
 	string.c   \
 	time.c     \
 	stdio.c    \
+	stdlib.c   \
 
 
 source-dir :=
