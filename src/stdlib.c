@@ -23,3 +23,26 @@ char* itoa(int value, char* str){
 	str[i] = '\0';
 	return str;
 }
+
+// ====================== Memory Allocation ======================
+
+HEAP_STATIC_FREE_AREA(init_free_area, 256);
+struct heap_free_area *malloc_heap = &init_free_area.free_area;
+
+static void* heap_alloc(struct heap_free_area ** heap, size_t *size){
+	
+}
+
+static void* heap_malloc(size_t size, struct heap_free_area** heap){
+	void* mem;
+
+	return mem;
+}
+
+void* malloc(size_t size){
+	void* mem;
+	mem = heap_malloc(size, &malloc_heap);
+	return mem;
+}
+
+// ================================================================

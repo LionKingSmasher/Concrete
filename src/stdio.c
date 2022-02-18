@@ -9,8 +9,8 @@ static void clear_array(char* arr, int size){
 
 int printf(const char* fmt, ...){
 	int i = 0, len = strlen(fmt);
-	char __a[10];
-	clear_array(__a, 10);
+	char __a[21];
+	clear_array(__a, 21);
 	va_list arg;
 	va_start(arg, fmt);
 
