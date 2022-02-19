@@ -13,6 +13,8 @@ struct heap_free_area{
 // HEAP_GRANULARITY 배수 공식
 #define ADJUST_HEAP_SIZE(X)   ((X + HEAP_GRANULARITY - 1) & ~(HEAP_GRANULARITY - 1))
 
+#define HEAP_START_ADDRESS(X) ((void*)((char*)(X+1) - X->size))
+
 #define HEAP_STATIC_FREE_AREA(name, size)                                  \
 	static struct {                                                        \
 		HEAP_GRANULARITY_TYPE aligned_space; /* aligned space */           \
