@@ -30,8 +30,6 @@ char* itoa(int value, char* str){
 HEAP_STATIC_FREE_AREA(init_free_area, 256);
 struct heap_free_area *malloc_heap = &init_free_area.free_area;
 
-static always_inline
-
 static void* heap_alloc(struct heap_free_area ** heap, size_t *size){
 	struct heap_free_area* area;
 	void* mem = NULL;

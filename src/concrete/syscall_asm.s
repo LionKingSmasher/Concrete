@@ -11,6 +11,7 @@ system_call:
 	// System call number
 	mov %rdi, %rax 
 	
+	// Arguments array
 	mov %rsi, %rbx
 	
 	mov   (%rbx), %rdi

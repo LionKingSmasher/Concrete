@@ -8,7 +8,7 @@ struct heap_free_area{
 	struct heap_free_area *next, *prev;
 };
 
-#define HEAP_GRANULARITY_TYPE double __attribute__((aligned(sizeof(size_t))));
+#define HEAP_GRANULARITY_TYPE double __attribute__((aligned(sizeof(size_t))))
 #define HEAP_GRANULARITY      (__alignof__(HEAP_GRANULARITY_TYPE))
 // HEAP_GRANULARITY 배수 공식
 #define ADJUST_HEAP_SIZE(X)   ((X + HEAP_GRANULARITY - 1) & ~(HEAP_GRANULARITY - 1))
