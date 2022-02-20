@@ -8,7 +8,7 @@ static void clear_array(char* arr, int size){
 		arr[i] = 0;
 }
 
-always_inline static void format_check(const char* str, va_list arg, int* size) {
+__always_inline static void format_check(const char* str, va_list arg, int* size) {
 	int i = *size;
 	char __a[21];
 	clear_array(__a, 21);
@@ -57,7 +57,9 @@ int printf(const char* fmt, ...){
 	va_start(arg, fmt);
 
 	for(;i < len; i++){
+		format_check(fmt, arg, &i);
 		write(STDOUT, &fmt[i], 1);
 	}
+	va_end(arg);
 	return 0;
 }

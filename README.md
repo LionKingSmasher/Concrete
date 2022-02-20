@@ -44,7 +44,7 @@ $ make install
 
 ### C 표준 라이브러리
 - <assert.h\>      : X
-- <complex.h\>     : X
+- <complex.h\>     : **15%**
 - <ctype.h\>       : X
 - <errno.h\>       : X
 - <fenv.h\>        : X
@@ -56,15 +56,15 @@ $ make install
 - <math.h\>        : X
 - <setjmp.h\>      : X
 - <signal.h\>      : X
-- <stdalign.h\>    : X
+- <stdalign.h\>    : **Complete**
 - <stdarg.h\>      : **Complete (Only for GCC)**
 - <stdatomic.h\>   : **35%**
 - <stdbool.h\>     : **Complete**
-- <stddef.h\>      : **50%**
+- <stddef.h\>      : **Complete**
 - <stdint.h\>      : X
 - <stdio.h\>       : **10%**
 - <stdlib.h\>      : **10%(Warning: I don't recommend use mamory allocation)**
-- <stdnoreturn.h\> : X
+- <stdnoreturn.h\> : **Complete**
 - <string.h\>      : **10%**
 - <tgmath.h\>      : X
 - <threads.h\>     : X
