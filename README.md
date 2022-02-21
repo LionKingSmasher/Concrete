@@ -49,7 +49,7 @@ $ make install
 - <errno.h\>       : X
 - <fenv.h\>        : X
 - <float.h\>       : X
-- <inttypes.h\>    : X
+- <inttypes.h\>    : **5%**
 - <iso646.h\>      : X
 - <limits.h\>      : X
 - <locale.h\>      : X
@@ -61,8 +61,8 @@ $ make install
 - <stdatomic.h\>   : **35%**
 - <stdbool.h\>     : **Complete**
 - <stddef.h\>      : **Complete**
-- <stdint.h\>      : X
-- <stdio.h\>       : **10%**
+- <stdint.h\>      : **90%**
+- <stdio.h\>       : **15%**
 - <stdlib.h\>      : **10%(Warning: I don't recommend use mamory allocation)**
 - <stdnoreturn.h\> : **Complete**
 - <string.h\>      : **10%**
@@ -95,7 +95,7 @@ $ make install
 - <ndbm.h\> : X
 - <net/if.h\> : X
 - <netdb.h\> : X
-- <netinet/in.h\> : X
+- <netinet/in.h\> : **40%**
 - <netinet/tcp.h\> : X
 - <nl_types.h\> : X
 - <poll.h\> : X
@@ -115,13 +115,13 @@ $ make install
 - <sys/select.h\> : X
 - <sys/sem.h\> : X
 - <sys/shm.h\> : X
-- <sys/socket.h\> : X
+- <sys/socket.h\> : **70%**
 - <sys/stat.h\> : X
 - <sys/statvfs.h\> : X
 - <sys/time.h\> : **10%**
 - <sys/times.h\> : X
-- <sys/types.h\> : X
-- <sys/uio.h\> : X
+- <sys/types.h\> : **10%**
+- <sys/uio.h\> : **10%**
 - <sys/un.h\> : X
 - <sys/utsname.h\> : X
 - <sys/wait.h\> : X

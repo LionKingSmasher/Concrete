@@ -1,6 +1,7 @@
 source-file :=
 source-file += \
-	time.c
+	time.c     \
+	socket.c
 
 CC = gcc
 CFLAGS = -I../../include
