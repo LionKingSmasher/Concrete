@@ -19,8 +19,6 @@ FILE * stdin  = &__stdin;
 FILE * stdout = &__stdout;
 FILE * stderr = &__stderr;
 
-
-
 static void clear_array(char* arr, int size){
 	for(register int i = 0; i < size; i++)
 		arr[i] = 0;

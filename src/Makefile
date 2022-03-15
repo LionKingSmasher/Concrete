@@ -7,6 +7,7 @@ source-file += \
 	time.c     \
 	stdio.c    \
 	stdlib.c   \
+	pwd.c      \
 
 
 source-dir :=

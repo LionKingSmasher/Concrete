@@ -11,6 +11,5 @@
 extern ssize_t write(int, const char*, size_t);
 extern int close(int);
 extern void _exit(int);
-#define exit _exit
 
 #endif

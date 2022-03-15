@@ -50,7 +50,7 @@ $ make install
 - <fenv.h\>        : X
 - <float.h\>       : X
 - <inttypes.h\>    : **5%**
-- <iso646.h\>      : X
+- <iso646.h\>      : **55%**
 - <limits.h\>      : X
 - <locale.h\>      : X
 - <math.h\>        : X
@@ -99,7 +99,7 @@ $ make install
 - <netinet/tcp.h\> : X
 - <nl_types.h\> : X
 - <poll.h\> : X
-- <pthread.h\> : X
+- <pthread.h\> : **0%**
 - <pwd.h\> : X
 - <regex.h\> : X
 - <sched.h\> : X
@@ -126,7 +126,7 @@ $ make install
 - <sys/utsname.h\> : X
 - <sys/wait.h\> : X
 - <syslog.h\> : X
-- <tar.h\> : X
+- <tar.h\> : **Complete**
 - <termios.h\> : X
 - <trace.h\> : X
 - <ulimit.h\> : X

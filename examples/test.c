@@ -13,7 +13,7 @@ void test_function(char a, ...){
 
 int main(int argc, char **argv){
 	time_t t = time(NULL);
-	printf("Test number: %d%%%c%s", 1, 'c', "Fal");
+	printf("Test number: %d%%%c%s\n", 1, 'd', argv[1]);
 	test_function('a', 'b');
 	return 0;
 }
