@@ -3,6 +3,7 @@
 void endwent(void){
 
 }
+
 struct passwd* getpwent(void){
 
 }

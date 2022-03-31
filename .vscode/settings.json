@@ -1,3 +1,11 @@
 {
-    "makefile.extensionOutputFolder": "./.vscode"
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "stdlib.h": "c",
+        "stdarg.h": "c",
+        "macro.h": "c",
+        "fcntl.h": "c",
+        "read_line.h": "c",
+        "syscall.h": "c"
+    }
 }

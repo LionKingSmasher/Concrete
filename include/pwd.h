@@ -9,7 +9,7 @@ struct passwd {
     gid_t pw_gid;   // group ID
     char* pw_dir;   // working directory
     char* pw_shell; // shell
-}
+};
 
 void endwent(void);
 struct passwd* getpwent(void);

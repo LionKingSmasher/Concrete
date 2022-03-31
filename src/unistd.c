@@ -1,8 +1,13 @@
 #include <unistd.h>
+#include <concrete/syscall.h>
 #include <concrete/macro.h>
 
 __always_inline ssize_t write(int fd, const char* str, size_t count) {
 	return concrete_syscall(0x01, fd, (u64)str, count);
+}
+
+__always_inline ssize_t read(int fd, char* buf, size_t count){
+	return concrete_syscall(0x00, fd, (u64)buf, count);
 }
 
 __always_inline int close(int fd){

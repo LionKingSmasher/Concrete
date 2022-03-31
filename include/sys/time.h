@@ -1,5 +1,8 @@
+#include <sys/types.h>
+
 #ifndef __SYS_TIME_H__
 #define __SYS_TIME_H__
+
 typedef double clock_t;
 
 struct timeval {
@@ -21,5 +24,4 @@ struct timezone {
 int getitimer(int, struct itimerval *);
 int gettimeofday(struct timeval *, struct timezone *);
 int settimeofday(const struct timeval *, const struct timezone *);
-int select(int, )
 #endif

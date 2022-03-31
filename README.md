@@ -139,6 +139,7 @@ $ make install
 - <concrete/macro.h\> : 개발에 필요한 매크로들 모음
 - <concrete/types.h\> : stddef.h와 겹쳐 없어질 예정
 - <concrete/syscall.h\> : 시스템 콜 구현 부분
+- <concrete/read_line.h\> : passwd와 같이 내부 시스템 파일을 살펴봐야 하는 경우를 대비한 한줄 읽기 변수
 
 ## 주의 사항
 
