@@ -5,18 +5,18 @@
 
 #define ATOMIC_FLAG_INIT {0}
 
-typedef atomic_bool   _Atomic _Bool;
-typedef atomic_char   _Atomic char;
-typedef atomic_schar  _Atomic signed char;
-typedef atomic_uchar  _Atomic unsigned char;
-typedef atomic_short  _Atomic short;
-typedef atomic_ushort _Atomic unsigned short;
-typedef atomic_int    _Atomic int;
-typedef atomic_uint   _Atomic unsigned int;
-typedef atomic_long   _Atomic long;
-typedef atomic_ulong  _Atomic unsigned long;
-typedef atomic_llong  _Atomic long long;
-typedef atomic_ullong _Atomic unsigned long long;
+typedef _Atomic _Bool 		       atomic_bool;
+typedef _Atomic char  		       atomic_char;
+typedef _Atomic signed char        atomic_schar;
+typedef _Atomic unsigned char      atomic_uchar;
+typedef _Atomic short		       atomic_short;
+typedef _Atomic unsigned short     atomic_ushort;
+typedef _Atomic int                atomic_int;
+typedef _Atomic unsigned int       atomic_uint;
+typedef _Atomic long               atomic_long;
+typedef _Atomic unsigned long      atomic_ulong;
+typedef _Atomic long long          atomic_llong;
+typedef _Atomic unsigned long long atomic_ullong;
 
 typedef enum {
 #if __GNUC__  // For GCC
@@ -31,11 +31,11 @@ typedef enum {
 #endif
 } memory_order;
 
-typedef struct _Atomic {
+typedef struct {
 	_Bool flag;
 } atomic_flag;
 
-always_inline void atomic_flag_clear(volatile atomic* obj){
+__always_inline void atomic_flag_clear(volatile atomic_flag* obj){
 	obj->flag = 0;
 }
 
